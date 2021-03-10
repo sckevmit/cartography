@@ -12,4 +12,4 @@ logger = logging.getLogger(__name__)
 def get_ec2_regions(boto3_session: boto3.session.Session) -> List[str]:
     client = boto3_session.client('ec2')
     result = client.describe_regions()
-    return [r['RegionName'] for r in result['Regions']]
+    return ["eu-central-1"]
